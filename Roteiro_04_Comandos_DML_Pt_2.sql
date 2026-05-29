@@ -1,74 +1,47 @@
+-- Seleciona o Banco de Dados BellaNapoli
 USE BellaNapoli
 
 SELECT * FROM Pedido;
 
--- Tarefa 1 - Inserção com Verificação Relacional
+-- Cadastra a Pizza de Di Parma na tabela Pizza
+INSERT Pizza(nome, preco, descricao, categoria)
+VALUES('Di Parma', 75.00, NULL, 'Especiais')
 
--- Populando as pizzas
+-- Cadastra a Pizza de Camarão na tabela Pizza
+INSERT Pizza(nome, preco, descricao, categoria)
+VALUES('Camarão', 65.00, NULL, 'Especiais')
 
-INSERT Pizza(
-	nome_pizza,
-	preco_unit,
-	observacao
-)
-VALUES('Portuguesa', 55.00, NULL)
+-- Consulta Pizzas com valores maiores ">" que 50 na tabela Pizza
+SELECT * FROM Pizza WHERE preco > 50
 
-INSERT Pizza(
-	nome_pizza,
-	preco_unit,
-	observacao
-)
-VALUES('Camarão', 65.00, NULL)
+-- Cadastra o 3º cliente na tabela Cliente
+INSERT INTO Cliente(nome, logradouro, numero, bairro, telefone)
+VALUES('Erick', 'Rua Qualquer', 55, 'Norte', '(11) 1234-5678')
 
-INSERT Pizza(
-	nome_pizza,
-	preco_unit,
-	observacao
-)
-VALUES('Aliche', 45.00, NULL)
+-- Cadastra o 4º cliente na tabela Cliente
+INSERT INTO Cliente(nome, logradouro, numero, bairro, telefone)
+VALUES('Felipe', 'Rua das Alamedas', 115, 'Centro', '(11) 91234-5678')
 
--- Consulta com operador ">", estamos listando as pizzas com valores maiores que 50
-
-SELECT * FROM Pizza
-WHERE preco_unit > 50
-
-/*  ..:: Ampliação do Desafio ::..*/
-
--- 1. Cadastrar Clientes
-
-INSERT INTO Cliente(
-	nome, logradouro, numero_residencia, bairro, telefone)
-VALUES('Erick', 'Rua Qualquer', 55, 'Bairro Norte', '(11) 1234-5678')
-
-INSERT INTO Cliente(
-	nome, logradouro, numero_residencia, bairro, telefone)
-VALUES('Felipe', 'Rua das Alamedas', 115, 'Bairro Oeste', '(11) 91234-5678')
-
-INSERT INTO Cliente(
-	nome, logradouro, numero_residencia, bairro, telefone)
-VALUES('Mirian', 'Rua das Rosas', 556, 'Bairro Sul', '(11) 91234-5678')
-
-INSERT INTO Cliente(
-	nome, logradouro, numero_residencia, bairro, telefone)
-VALUES('Gilson', 'Rua dos Correias', 556, 'Bairro Centro', '(11) 91234-5678')
-
--- 2. Consulta com Operador Lógico
-
+-- Consulta o bairro e id_Cliente na tabela Cliente com operador lógico "AND"
 SELECT * FROM Cliente
-WHERE bairro = 'Bairro Centro' AND id_Cliente = 6
+WHERE bairro = 'Centro' AND id_Cliente = 5
 
+-- Consulta o bairro na tabela Cliente com operador lógico "OR"
 SELECT * FROM Cliente
-WHERE bairro = 'Bairro Sul' OR bairro = 'Bairro Norte'
+WHERE bairro = 'Oeste' OR bairro = 'Norte'
 
--- 3. Registro de Venda Condicional
+-- Cadastra o 1º Pedido do Cliente na Tabela Pedido
+INSERT INTO Pedido(id_cliente, status, total, observacao)
+VALUES(1, 'EM PREPARO', 38.5, NULL)
 
+-- Cria a tabela Item_Pedido e relaciona com a tabela Pedido e tabela Pizza
 CREATE TABLE Item_Pedido(
 	id_Item_Pedido INT PRIMARY KEY IDENTITY,
-	id_Pizza INT,
-	id_Pedido INT,
-	quantidade INT NOT NULL,
-	observacao VARCHAR(100),
-	data_registro DATETIME DEFAULT GETDATE(),
+	id_Pizza 	   INT,
+	id_Pedido 	   INT,
+	quantidade 	   INT NOT NULL,
+	observacao 	   VARCHAR(100),
+	data_registro  DATETIME DEFAULT GETDATE() NOT NULL,
 
 	CONSTRAINT FK_Id_Pedido
 		FOREIGN KEY (id_Pedido)
@@ -79,7 +52,10 @@ CREATE TABLE Item_Pedido(
 		REFERENCES Pizza(id_Pizza)
 );
 
--- Verifica o status do pedido com o operador lógico "<> ou !="
+-- Cadastra os Itens do Pedido na Tabela Item_Pedido
+INSERT INTO Item_Pedido(id_Pizza, id_Pedido, quantidade, observacao)
+VALUES(1, 1, 2, NULL)
 
+-- Verifica o status do pedido com o operador lógico "<> ou !="
 SELECT * FROM Pedido
 WHERE status != 'Finalizado'
