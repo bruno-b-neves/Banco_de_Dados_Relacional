@@ -21,7 +21,7 @@ O foco deste projeto é estritamente **educacional**. Ele funciona como um portf
 
 Durante a jornada acadêmica, os scripts e atividades foram divididos com base nas sublinguagens do ecossistema SQL:
 
-###$ 📐 1. DDL (Data Definition Language — Linguagem de Definição de Dados)
+#### 📐 1. DDL (Data Definition Language — Linguagem de Definição de Dados)
 Responsável pela criação, alteração e estruturação dos objetos físicos e lógicos do banco de dados (esquemas, tabelas e integridade referencial por meio de chaves primárias e estrangeiras):
 * `CREATE TABLE`: Criação de novas tabelas e definição de tipos de dados.
 * `ALTER TABLE`: Modificação de colunas ou restrições de tabelas existentes.
