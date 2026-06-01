@@ -1,8 +1,10 @@
 # 🎓 Banco de Dados Relacional — Aprendizado Acadêmico
 
-![SQL](https://img.shields.io/badge/SQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
-![DML](https://img.shields.io/badge/Linguagem-DML_/_DDL-orange?style=for-the-badge)
-![Status](https://img.shields.io/badge/Foco-Educacional-brightgreen?style=for-the-badge)
+<p align="center">
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL Badge">
+  <img src="https://img.shields.io/badge/SQL-PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres Badge">
+  <img src="https://img.shields.io/badge/Foco-Educacional--Acadêmico-blue?style=for-the-badge" alt="Foco Universitário">
+</p>
 
 Este repositório foi criado com o objetivo de centralizar, organizar e documentar todo o aprendizado prático e teórico sobre **Bancos de Dados Relacionais** adquirido durante a minha jornada na faculdade.
 
