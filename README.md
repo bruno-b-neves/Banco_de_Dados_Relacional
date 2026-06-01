@@ -21,23 +21,34 @@ O foco deste projeto é estritamente **educacional**. Ele funciona como um portf
 
 Durante a jornada acadêmica, os scripts e atividades foram divididos com base nas sublinguagens do ecossistema SQL:
 
-### 📐 1. DDL (Data Definition Language)
-Focado na criação e estruturação do banco de dados, garantindo a integridade referencial por meio de chaves primárias e estrangeiras:
-* Criação de tabelas (`CREATE TABLE`).
-* Alteração de estruturas físicas (`ALTER TABLE`).
-* Remoção de objetos do esquema (`DROP TABLE`).
+###$ 📐 1. DDL (Data Definition Language — Linguagem de Definição de Dados)
+Responsável pela criação, alteração e estruturação dos objetos físicos e lógicos do banco de dados (esquemas, tabelas e integridade referencial por meio de chaves primárias e estrangeiras):
+* `CREATE TABLE`: Criação de novas tabelas e definição de tipos de dados.
+* `ALTER TABLE`: Modificação de colunas ou restrições de tabelas existentes.
+* `DROP TABLE`: Remoção definitiva de tabelas e suas estruturas do banco de dados.
 
-### ✍️ 2. DML (Data Manipulation Language)
-Manipulação direta dos dados armazenados, aplicando as regras de negócio solicitadas nos enunciados da faculdade:
-* Inserção de registros (`INSERT INTO`).
-* Atualização segura e condicional de dados (`UPDATE` com cláusula `WHERE`).
-* Remoção controlada de registros (`DELETE FROM`).
+#### ✍️ 2. DML (Data Manipulation Language — Linguagem de Manipulação de Dados)
+Focada na inserção e modificação direta dos dados armazenados nas tabelas, aplicando as regras de negócio solicitadas nos enunciados práticos:
+* `INSERT INTO`: Inclusão e povoamento de novos registros nas entidades.
+* `UPDATE`: Atualização condicional e segura de dados (utilizando de forma obrigatória a cláusula `WHERE`).
+* `DELETE FROM`: Remoção controlada de registros específicos.
 
-### 🔍 3. DQL (Data Query Language)
-O núcleo da análise de dados, progredindo desde consultas simples até a extração de informações complexas de múltiplas tabelas correlacionadas:
-* Consultas básicas estruturadas (`SELECT`, `FROM`, `WHERE`).
-* Agrupamentos e funções agregadas (`GROUP BY`, `COUNT`, `SUM`, `AVG`).
-* Junções de tabelas (`INNER JOIN`, `LEFT JOIN`, `RIGHT JOIN`).
+#### 🔍 3. DQL (Data Query Language — Linguagem de Consulta de Dados)
+O núcleo da extração e análise de dados. Abrange desde consultas simples a uma única tabela até construções complexas envolvendo filtros avançados e relacionamentos:
+* `SELECT` / `FROM` / `WHERE`: Estrutura base para projeção, origem e filtragem de dados.
+* `GROUP BY` / `HAVING`: Agrupamentos e condições aplicadas a funções agregadas (`COUNT`, `SUM`, `AVG`, `MAX`, `MIN`).
+* `INNER JOIN` / `LEFT JOIN` / `RIGHT JOIN`: Junção de múltiplas tabelas através de chaves correlacionadas.
+
+#### 🤝 4. DTL ou TCL (Data/Transaction Control Language — Linguagem de Controle de Transação)
+Utilizada para gerenciar transações lógicas no banco de dados, garantindo as propriedades ACID (Atomicidade, Consistência, Isolamento e Durabilidade) em operações sequenciais complexas:
+* `BEGIN TRANSACTION`: Início de um bloco de instruções que devem ser tratadas como uma única unidade de trabalho.
+* `COMMIT`: Confirmação e gravação definitiva de todas as alterações feitas na transação.
+* `ROLLBACK`: Cancelamento e reversão de todas as alterações caso ocorra algum erro no processo.
+
+#### 🛡️ 5. DCL (Data Control Language — Linguagem de Controle de Dados)
+Focada na administração de segurança, privilégios e permissões de acesso ao banco de dados, simulando as responsabilidades de um DBA (Database Administrator):
+* `GRANT`: Concessão de permissões específicas de leitura ou escrita para usuários ou perfis.
+* `REVOKE`: Remoção ou cancelamento de privilégios previamente concedidos.
 
 ---
 
