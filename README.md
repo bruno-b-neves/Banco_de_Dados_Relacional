@@ -1,10 +1,9 @@
 <h1 align="center">🗄️ Banco de Dados Relacional — SQL Server</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Microsoft%20SQL%20Server-CC292B?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server">
-  <img src="https://img.shields.io/badge/Linguagem-T--SQL-blue?style=for-the-badge" alt="T-SQL">
-  <img src="https://img.shields.io/badge/Foco-Educacional--Acad%C3%Aamico-brightgreen?style=for-the-badge" alt="Acadêmico">
-  <img src="https://img.shields.io/badge/Paradigma-Relacional-orange?style=for-the-badge" alt="Relacional">
+  <img src="https://img.shields.io/badge/SQL_Server-CC292B?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" alt="SQL Server">
+  <img src="https://img.shields.io/badge/T--SQL-0078D4?style=for-the-badge" alt="T-SQL">
+  <img src="https://img.shields.io/badge/Acad%C3%Aamico-239120?style=for-the-badge" alt="Acadêmico">
 </p>
 
 ---
